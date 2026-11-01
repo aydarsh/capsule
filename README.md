@@ -19,7 +19,17 @@ Show your clothes, choose a destination, and build a connected plan: outfits, ac
 
 An agent that can load `SKILL.md`, understand your attachments and access the tools you need. Web search is needed for current travel facts. Photo-based image generation requires a compatible reference-image tool; a text outfit list is available without it. A subscription or tool charges are governed by your client. Installing the skill does not grant capabilities that the client lacks.
 
-## Install in Codex
+## Install by asking your agent
+
+In an agent with network and local file access, such as Codex or Claude Code, paste this request:
+
+> Install the capsule-travel skill from https://github.com/aydarsh/capsule. The skill is in skills/capsule-travel. Install the complete folder in this client's personal skills directory. If it is already installed, tell me before replacing it.
+
+The agent can download the files and place them in the appropriate directory; it may ask for permission. After installation, open a new chat and invoke `$capsule-travel` in Codex or `/capsule-travel` in Claude Code. A web chat without file access or skill installation support cannot install it just from a link.
+
+## Manual installation
+
+### Codex
 
 Clone once, then copy the complete skill directory. These commands are for macOS/Linux and refuse to replace an existing installation:
 
@@ -36,7 +46,7 @@ fi
 
 Open a new Codex chat and invoke `$capsule-travel`. On Windows, copy the `capsule-travel` folder into `.agents/skills` inside your user home, preserving its `references` and `agents` folders.
 
-## Install in Claude Code
+### Claude Code
 
 After cloning, run from the repository directory:
 
@@ -46,7 +56,7 @@ claude --plugin-dir "$PWD"
 
 Invoke `/capsule:capsule-travel` in that session. For a standalone personal skill, copy `skills/capsule-travel` into `~/.claude/skills/` without replacing an existing folder, start a new session, and invoke `/capsule-travel`. Choose one method to avoid duplicate skills. No MCP configuration is required.
 
-## Other clients
+### Other clients
 
 The release ZIP contains the complete `capsule-travel` directory with `SKILL.md` at its root. Import it only if the client supports custom Agent Skills, or extract it into the client's documented skill directory. An ordinary chat interface does not necessarily support installing a skill ZIP. Photo editing, browsing, voice input and cross-chat memory vary by client; universal compatibility is not promised.
 
