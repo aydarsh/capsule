@@ -1,0 +1,9 @@
+{
+  "name": "capsule",
+  "version": "0.1.0",
+  "description": "Wardrobe-first travel planning in chat, using the agent's search and image tools.",
+  "author": {"name": "Aydar Sharafiev"},
+  "homepage": "https://github.com/aydarsh/capsule",
+  "repository": "https://github.com/aydarsh/capsule",
+  "license": "MIT"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Капсула / Capsule"
+  short_description: "Путешествия от гардероба — прямо в чате"
+  default_prompt: "Используй $capsule-travel: помоги собрать образы из моих вещей и спланировать поездку."
